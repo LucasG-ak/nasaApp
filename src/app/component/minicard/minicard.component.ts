@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-minicard',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./minicard.component.scss'],
 })
 export class MinicardComponent implements OnInit {
+  @Input() text: string;
 
   constructor() { }
 

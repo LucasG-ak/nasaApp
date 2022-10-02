@@ -1,4 +1,5 @@
 .card {
+  overflow-y: scroll;
   position: relative;
   border-radius: 10px;
   height: 80vh;
@@ -14,7 +15,7 @@
 }
 
 .image {
-  height: 500px;
+  height: 80vh;
   width: 800px;
   background: url('../../../assets/images/BG.jpg') center center / cover;
 }
@@ -31,4 +32,11 @@
 
 .text {
   word-wrap: break-word;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.card-content {
+  width: 50vw;
+  height: 80vh;
 }
