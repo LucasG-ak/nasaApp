@@ -1,10 +1,9 @@
 .card {
-  overflow-y: scroll;
   position: relative;
   border-radius: 10px;
   height: 80vh;
-  width: 88vw;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.3);
   box-sizing: content-box;
   padding: 10px;
 }
@@ -15,9 +14,19 @@
 }
 
 .image {
+  position:fixed;
   height: 80vh;
-  width: 800px;
+  width: 10vw;
+  z-index: -1;
   background: url('../../../assets/images/BG.jpg') center center / cover;
+}
+
+.image1 {
+  left: 10vw;
+}
+
+.image2 {
+  right:10vw;  
 }
 
 .row {
@@ -33,10 +42,17 @@
 .text {
   word-wrap: break-word;
   height: 80vh;
-  overflow: scroll;
+  width:56vw;
+  margin: 0 12vw;
+  overflow-y: auto;
+  line-height: 1.6rem;
 }
 
 .card-content {
   width: 50vw;
   height: 80vh;
+}
+
+.container {
+  width: 80vw;
 }
