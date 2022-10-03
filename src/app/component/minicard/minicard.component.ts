@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MinicardComponent implements OnInit {
   @Input() text: string;
+  @Input() properties: string;
 
   constructor() { }
 

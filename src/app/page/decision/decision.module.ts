@@ -9,6 +9,7 @@ import { DecisionPageRoutingModule } from './decision-routing.module';
 import { DecisionPage } from './decision.page';
 import { DialogComponent } from 'src/app/component/dialog/dialog.component';
 import { MinicardComponent } from 'src/app/component/minicard/minicard.component';
+import { ButtonComponent } from 'src/app/component/button/button.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { MinicardComponent } from 'src/app/component/minicard/minicard.component
     IonicModule,
     DecisionPageRoutingModule
   ],
-  declarations: [DecisionPage, DialogComponent, MinicardComponent]
+  declarations: [DecisionPage, DialogComponent, MinicardComponent, ButtonComponent]
 })
 export class DecisionPageModule {}
