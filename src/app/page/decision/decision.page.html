@@ -3,8 +3,16 @@
   <div class="col">
     <app-dialog  text={{textts}}></app-dialog>
     <div class="row">
-      <app-minicard text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum unde sequi sed iste sunt fuga doloremque quam, explicabo vel totam maxime reprehenderit velit sit voluptatem consequuntur culpa provident cumque a!" (click)="getText()"></app-minicard>
-      <app-minicard text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius maxime ab vitae. Officiis placeat, rerum qui aliquid aperiam quo quos impedit enim vel fugit voluptatibus perferendis blanditiis nobis nihil!"></app-minicard>
+      <button class="btn2" *ngIf="this.condition===-1" (click)="this.condition=0; getText()">Start</button>
+      <button *ngIf="this.condition===0" class="btn" (click)="getText()">Next</button>
+      <button *ngIf="this.condition===0" class="btn" (click)="nextEvent(this.iterator)">Skip</button>
+      <app-minicard *ngIf="this.condition===1" text={{card1Text}} properties={{card1Prop}} (click)="this.c=1; getText()"></app-minicard>
+      <app-minicard *ngIf="this.condition===1" text={{card2Text}} properties={{card2Prop}} (click)="this.c=0;this.condition=0; getText()"></app-minicard>
+      <app-minicard *ngIf="this.condition===3" text={{card2Text}} properties={{card2Prop}} (click)="this.c=0; this.condition=0; this.iterator=7; getText()"></app-minicard>
+      <div *ngIf="this.condition===2" class="col">
+        <input *ngIf="this.condition===2" class="input" id="input" placeholder="Your Name">
+        <button *ngIf="this.condition===2" class="btn2" style="align-items: center;" (click)="getText()">Continue</button>
+      </div>
     </div>
   </div>
 </ion-content>
