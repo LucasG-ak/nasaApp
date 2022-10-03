@@ -40,7 +40,7 @@ export class DecisionPage implements OnInit {
       const inputName = document.getElementById('input') as HTMLInputElement | null;
       console.log(inputName.value);
       this.name = inputName.value;
-      this.textts='It is a pleasure to meet you '+ this.name +'. Let us get to work! Our objective is to design Parkers key components.';
+      this.textts='It is a pleasure to meet you '+ this.name +'. Let us get to work! Our objective is to design Parker`s key components.';
       this.condition=0;
     }
     else if (this.iterator===5){
@@ -59,7 +59,7 @@ export class DecisionPage implements OnInit {
       this.condition = 0;
     }
     else if (this.iterator===8 && this.c===1){
-      this.textts='We need a material that can resist the Suns heat and protect our equipment in the probe.';
+      this.textts='We need a material that can resist the Sun`s heat and protect our equipment in the probe.';
     }
     else if (this.iterator===7 && this.c===0){
       this.textts='Good pick '+ this.name +' .Carbon composites are great at resisting heat and are lighter than steel,';
